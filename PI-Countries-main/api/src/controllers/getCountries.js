@@ -1,20 +1,28 @@
-const apiData = require("./getApiCountries");
-const { Country, Activity } = require("../db");
-const {Op, where} = require('sequelize');
+const { Country, TouristActivity } = require("../db");
+const { Op } = require("sequelize");
 
 const GetCountries = async () => {
   const db = await Country.findAll();
   return db;
 };
 
-const GetCountryById = async (id) => {
-  const data = await GetCountries();
-  const result = data.filter((country) => country.id === id.toUpperCase());
-  if (result.length) {
-    return result;
-  }
-  throw new Error(`No se encontro ningun pais con la ID ${id.toUpperCase()}`);
-};
+function GetCountryDetail(id) {
+  return Country.findByPk(id.toUpperCase(), {
+    include: [
+      {
+        model: TouristActivity,
+        attributes: {
+          exclude: ["createdAt", "updatedAt"],
+        },
+      },
+    ],
+    attributes: {
+      exclude: ["createdAt", "updatedAt"],
+    },
+  }).then((response) =>
+    response ? response : "We're sorry, no matches were found for your search"
+  );
+}
 
 function GetCountriesOrdered(order, param) {
   let countries = [];
@@ -63,29 +71,34 @@ function SearchCountries(name) {
   });
 }
 
-function FilterCountries(filter){
-  let countries =[];
-  return Activity.findOne({
-    where:{name: filter},
-    include: [{
-      model: Country
-    }]
-  })
-    .then(response => {response.countries.forEach(co => countries.push({
+function FilterCountries(filter) {
+  let countries = [];
+  console.log(filter);
+  return TouristActivity.findOne({
+    where: { name: filter },
+    include: [
+      {
+        model: Country,
+      },
+    ],
+  }).then((response) => {
+    response.countries.forEach((co) =>
+      countries.push({
         name: co.name,
         flag: co.flag,
         continent: co.continent,
         id: co.id,
-        population: co.population
-      }));
-      return countries;}
-    )
+        population: co.population,
+      })
+    );
+    return countries;
+  });
 }
 
 module.exports = {
   GetCountries,
   GetCountriesOrdered,
   SearchCountries,
-  GetCountryById,
-  FilterCountries
+  GetCountryDetail,
+  FilterCountries,
 };

@@ -13,11 +13,11 @@ activity.get("/", async (req, res) => {
 
 activity.post("/", async (req, res) => {
   try {
-    const { name, difficulty, duration, season } = req.body;
-    const activity = await CreateActivity(name, difficulty, duration, season);
+    const { name, difficulty, duration, season, countryId } = req.body;
+    const activity = await CreateActivity(name, difficulty, duration, season, countryId);
     res.status(200).send(activity);
   } catch (error) {
-    res.status("400").json(error.message);
+    res.status(400).json(error.message);
   }
 });
 

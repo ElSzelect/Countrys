@@ -1,0 +1,31 @@
+.bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+.bar1{
+    margin-right: 20px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+}
+.bar2{
+    margin-right: 20px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+}
+.bar1Img{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.bar1Img:hover{
+    filter: invert(100%);
+    background: orangered;
+    border-radius: 25px;
+}
+.selForm{
+    margin-inline: 20px;
+}

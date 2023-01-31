@@ -1,0 +1,36 @@
+.landing{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: center;
+    height: 100vh;
+    background: url("./landing_page_small.jpg") no-repeat;
+    background-size: cover;
+}
+.icon{
+    width: 70px;
+    position: relative;
+    filter: invert(100%);
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.icon:hover{
+    background: #00000030;
+    border-radius: 25px;
+    filter: invert(80%);
+}
+.title{
+    color: #ffffffa9;
+    font-size: 12vh;
+    font-family: "Bahnschrift",Helvetica, sans-serif;
+    font-stretch: ultra-condensed;
+    margin-bottom: 28px;
+    width: 600px;
+    text-align: left;
+    line-height: 70px;
+    letter-spacing: -4px;
+    margin-left: 15px;
+}
+
+
+/*https://get.pxhere.com/photo/globe-world-earth-sphere-map-interior-design-space-planet-1618501.jpg*/

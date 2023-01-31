@@ -2,7 +2,7 @@ const { Router } = require("express");
 const {
   GetCountriesOrdered,
   GetCountries,
-  GetCountryById,
+  GetCountryDetail,
   SearchCountries,
   FilterCountries,
 } = require("../controllers/getCountries");
@@ -48,11 +48,13 @@ countries.get("/", (req, res, next) => {
 countries.get("/:id", async (req, res) => {
   const { id } = req.params;
   try {
-    const response = await GetCountryById(id);
+    const response = await GetCountryDetail(id);
     res.status(200).json(response);
   } catch (error) {
     res.status(404).send(error.message);
   }
 });
+
+
 
 module.exports = { countries };

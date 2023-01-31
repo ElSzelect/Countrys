@@ -1,0 +1,9 @@
+body{
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url("./city_0.jpg");
+    font-family: "Bahnschrift",Helvetica, sans-serif;
+}
+img,label{
+    display: flex;
+}

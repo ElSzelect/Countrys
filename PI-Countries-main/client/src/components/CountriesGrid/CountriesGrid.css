@@ -1,0 +1,33 @@
+.grid{
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.pageButton{
+    color: white;
+    background: dimgray;
+    margin: 5px;
+}
+.page{
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.buttons{
+    margin-top: 20px;
+    position: fixed;
+    width: 500px;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -250px;
+    background: #bd5c50;
+}

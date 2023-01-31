@@ -1,0 +1,103 @@
+fieldset{
+    display: flex;
+    justify-content: center;
+    background: #ffffffb0;
+}
+.incomplete {
+    color: crimson;
+}
+.complete{
+    color: green;
+}
+.homeB:hover{
+    filter: invert(100%);
+    background: orangered;
+    border-radius: 25px;
+}
+.inputs{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.back0 {
+    background: url("./random_activity_0.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.back1 {
+    background: url("./random_activity_1.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.back2 {
+    background: url("./random_activity_2.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.back3 {
+    background: url("./random_activity_3.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.back4 {
+    background: url("./random_activity_4.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.back5 {
+    background: url("./random_activity_5.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.back6 {
+    background: url("./random_activity_6.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.back7 {
+    background: url("./random_activity_7.jpg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.back8 {
+    background: url("./random_activity_8.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+.back9 {
+    background: url("./random_activity_9.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+/*.back10 {background: url("./random_activity_10.jpg");*/
+/*    background-size: cover;*/
+/*    height: 100vh;}*/
+/*.back11 {background: url("./random_activity_11.jpg");*/
+/*    background-size: cover;*/
+/*    height: 100vh;}*/
+/*.back12 {background: url("./random_activity_12.jpg");*/
+/*    background-size: cover;*/
+/*    height: 100vh;}*/
+/*.back13 {background: url("./random_activity_13.jpg");*/
+/*    background-size: cover;*/
+/*    height: 100vh;}*/
+/*.back14 {background: url("./random_activity_14.jpg");*/
+/*    background-size: cover;*/
+/*    height: 100vh;}*/
+/*.back15 {background: url("./random_activity_15.jpg");*/
+/*    background-size: cover;*/
+/*    height: 100vh;}*/
+/*.back16 {background: url("./random_activity_16.jpg");*/
+/*    background-size: cover;*/
+/*    height: 100vh;}*/
+/*.back17 {background: url("./random_activity_17.jpg");*/
+/*    background-size: cover;*/
+/*    height: 100vh;}*/
+/*.back18 {background: url("./random_activity_18.jpg");*/
+/*    background-size: cover;*/
+/*    height: 100vh;}*/
+/*.back19 {background: url("./random_activity_19.jpg");*/
+/*    background-size: cover;*/
+/*    height: 100vh;}*/
+
+

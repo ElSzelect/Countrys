@@ -1,0 +1,23 @@
+.card {
+    margin: 7px ;
+    width: 240px;
+    height: 250px;
+    border: 1px solid dimgray;
+    text-align: -webkit-center;
+    background: #adadad85;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-shadow: 3px 1px grey;
+    color: whitesmoke;
+    text-decoration-line: none;
+
+}
+h3{
+    padding-inline: 2px;
+}
+.flag{
+    border-radius: 10px 2px;
+    margin-bottom: -15px;
+}
