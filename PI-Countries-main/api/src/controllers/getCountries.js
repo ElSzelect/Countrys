@@ -82,7 +82,8 @@ function FilterCountries(filter) {
       },
     ],
   }).then((response) => {
-    response.countries.forEach((co) =>
+    // return response
+    response.Countries.forEach((co) =>
       countries.push({
         name: co.name,
         flag: co.flag,

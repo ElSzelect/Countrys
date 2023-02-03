@@ -88,11 +88,14 @@ export function NewActivity(props){
     </div>
   )
 }
+
 const mapStateToProps = (state) => ({     //subscribe component to state.selectedCountry
   countries: state.countries
 });
+
 function mapDispatchToProps(dispatch){
   return {
     addActivity: (activity) => dispatch(addActivity(activity))}
 }
+
 export default connect(mapStateToProps,mapDispatchToProps)(NewActivity);

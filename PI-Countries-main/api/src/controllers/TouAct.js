@@ -25,4 +25,13 @@ const CreateActivity = async (
 
 const GetActivity = async () => await TouristActivity.findAll();
 
+// function GetActivities(){
+//   let activities = [];
+//   return Activity.findAll()
+//     .then(response => {
+//       response.forEach(ac => activities.push(ac.name));
+//       return activities;
+//     })
+// }
+
 module.exports = { CreateActivity, GetActivity };
