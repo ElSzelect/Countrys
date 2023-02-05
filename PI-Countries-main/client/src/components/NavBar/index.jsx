@@ -26,11 +26,15 @@ export function NavBar(props){
   const [frontFilterValue,setFrontFilterValue]= useState('');
 
   const {activityList,countries,resultCountries,setPage} = props;
+
   const activitiesOptions = activityList.map(act=><option key={act.id} name={act.name} value={act.name}>{act.name}</option>);
+
   let con=[];
+
   const continentOptions = [...countries].sort(compare)
     .filter(e=>{if (con.includes(e.continent)) return false; else {con.push(e.continent); return true;}})
     .map(c => <option name={c.continent} key={c.continent} value={c.continent}>{c.continent}</option>)
+    
   function compare(a,b) {
     if (a.continent < b.continent) return -1;
     if (a.continent > b.continent) return 1;
@@ -102,15 +106,17 @@ export function NavBar(props){
     <div className="bar">
       <div className="bar1">
         <img className="bar1Img" title="Home" name="img" width={50} src='https://static.thenounproject.com/png/2002086-200.png'  onClick={handleClear} alt='home'/>
-        {/*<form id="order" >*/}
+        
         <Link  to="/activity">
           <button className="selForm">NEW ACTIVITY 🗺️</button>
         </Link>
+
         <form id={'search'} onSubmit={(e)=>handleSearch(e)}>
           <input autoComplete="off" type="search" value={searchValue} onChange={e=>setSearchValue(e.target.value)}/>
           <input type="submit" value="SEARCH 🔍"/>
         </form>
       </div>
+
       <div className="bar2">
         <select className="selForm" id="order" value={orderValue} onChange={(e)=>handleOrder(e)}>
           <option value="none">ORDER  </option>
@@ -119,16 +125,19 @@ export function NavBar(props){
           <option value="pAsc"> Population ▲ </option>
           <option value="pDesc"> Population ▼ </option>
         </select>
-        {/*</form>*/}
+        
         <select id="frontFilter" value={frontFilterValue} onChange={(e)=>handleFrontFilter(e)}>
-          <option value="">CONTINENT</option>
+          <option value="">CONTINENT</option> 
           {continentOptions}
         </select>
+
         <select className="selForm" id="contFilter" onChange={(e)=>handleFilter(e)} value={filterValue}>
           <option value="">ACTIVITY</option>
           {activitiesOptions}
         </select>
+
         <button onClick={e => handleClear(e)}>CLEAR ❌</button>
+
       </div>
     </div>
   )

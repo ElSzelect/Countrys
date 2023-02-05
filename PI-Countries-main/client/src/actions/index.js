@@ -78,22 +78,6 @@ export function searchCountry(name) {
   };
 }
 
-// export function searchCountry(name){
-//   return async function (dispatch){
-//     let result = await fetch(`${COUNTRIES_URL}?name=${name}`)
-//     let final = await result.json();
-//     if(Array.isArray(final)) dispatch({
-//       type: 'SEARCH_COUNTRY',
-//       payload: final
-//     });
-//     else {
-//       alert(final.message);
-//       dispatch({type: 'SEARCH_COUNTRY',
-//         payload:[]})
-//     }
-//   }
-// }
-
 export function addActivity(activity) {
   return function (dispatch) {
     return axios.post(ACTIVITY_URL, activity).then((result) => {
@@ -106,35 +90,6 @@ export function addActivity(activity) {
   };
 }
 
-// export function addActivity(activity){
-//   return function (dispatch){
-//     fetch(ACTIVITY_URL,{method:'POST', headers:{
-//         'Content-Type': 'application/json'},
-//       body:JSON.stringify(activity)})
-//       .then(result => result.json())
-//       .then(msj => {
-//         alert(msj.message);
-//         dispatch({
-//           type: 'ADD_ACTIVITY',
-//           payload: activity.name
-//         })
-//       })
-//   }
-// }
-
-// export function addActivity(activity){
-//   return async function (dispatch){
-//     let response = await fetch(ACTIVITY_URL,{method:'POST', headers:{
-//         'Content-Type': 'application/json'},
-//       body:JSON.stringify(activity)});
-//     let msj = await response.json();
-//     alert(msj.message);
-//     dispatch({
-//       type: 'ADD_ACTIVITY',
-//       payload: activity.name
-//     })
-//   }
-// }
 
 export function filterCountry(activity) {
   return function (dispatch) {
@@ -146,11 +101,15 @@ export function filterCountry(activity) {
     );
   };
 }
+
+
 export function frontFilter(continent) {
   return function (dispatch) {
     dispatch({ type: "FRONT_FILTER", payload: continent });
   };
 }
+
+
 export function frontOrder(parameters) {
   switch (parameters) {
     case "abc":
@@ -197,6 +156,7 @@ export function frontOrder(parameters) {
       break;
   }
 }
+
 export function setPage(newPage) {
   return function (dispatch) {
     dispatch({

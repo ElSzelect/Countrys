@@ -68,13 +68,6 @@ export function NewActivity(props){
           </datalist>
         </div>
 
-        {/*<select name="season" defaultValue={''} value={activity.season} onChange={(e)=>changeValues(e)}>*/}
-        {/*  <option key="SEASON" value="">SEASON</option>*/}
-        {/*  <option key="summer" value="summer">summer</option>*/}
-        {/*  <option key="fall" value="fall">fall</option>*/}
-        {/*  <option key="winter" value="winter">winter</option>*/}
-        {/*  <option key="spring" value="spring">spring</option>*/}
-        {/*</select >*/}
         <br/>
         <label htmlFor="countryId">Select countries related to this activity: </label><br/>
         <select multiple={true} id="countryId" required={true} value={activity.countryId} name="countryId" size="10" onChange={(e)=>{

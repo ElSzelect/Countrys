@@ -11,10 +11,7 @@ module.exports = (sequelize) => {
         primaryKey: true,
         allowNull: false,
 
-        // validate: {
-        //   is: /^\d{3}[a-zA-Z]{3}$/,
-        //   msg: "Please write just three letters",
-        // },
+        
       },
       name: {
         type: DataTypes.STRING,

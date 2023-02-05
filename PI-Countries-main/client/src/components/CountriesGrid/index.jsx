@@ -39,7 +39,7 @@ export function CountriesGrid(props){
             </div>)
         })}
       </div>
-      <div className="buttons">{buttonLeft()} <strong className="page"> {currentPage} </strong> {buttonRight()}</div>
+      
     </div>
   )
 }
@@ -49,6 +49,7 @@ const mapStateToProps = (state) => ({     //subscribe component to state
   resultCountries: state.resultCountries,
   currentPage: state.currentPage
 });
+
 function mapDispatchToProps(dispatch){
   return {
     setPage: (newPage) => dispatch(setPage(newPage))

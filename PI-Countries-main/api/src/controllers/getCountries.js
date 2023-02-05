@@ -26,7 +26,8 @@ function GetCountryDetail(id) {
 
 function GetCountriesOrdered(order, param) {
   let countries = [];
-  return Country.findAll({ order: [[param, order]] }).then((response) => {
+  return Country.findAll({ order: [[param, order]] }).then((response) => { 
+    // param es la columna que se quiere usar para ordenar, y "order" puede ser ASC o DESC
     response.forEach((co) =>
       countries.push({
         name: co.name,
@@ -71,7 +72,7 @@ function SearchCountries(name) {
   });
 }
 
-function FilterCountries(filter) {
+function FilterCountries(filter) { // Filtra Paises x Actividad
   let countries = [];
   console.log(filter);
   return TouristActivity.findOne({
